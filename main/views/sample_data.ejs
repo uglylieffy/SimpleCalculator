@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="../css/style.css">
+		<!-- Meta  -->
+		<meta charset="utf-8">
+		<title>Basic Calculator Web Application</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Basic Calculator">
+		<meta name="author" content="Yuqi Yang">
+		<!-- Bootstrap -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+    <body>
+        <!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+			<div class="container">
+				<a class="navbar-brand" style="color: white;">Basic Calculator Web Application</a>
+			</div>
+		</nav>
+
+        <!-- Container Start -->
+        <div class="container">
+            <!-- BS: row justify-content-*-center Start-->
+            <div class="row justify-content-center p-5">
+                <span class="border p-5">
+                        <form method="POST" action="/sample_data/add_sample_data"  name="simple_cal" style="float: left;">
+                            <div class="text-center pb-3">
+                                <input type="text" name="answ" id="answ" class="form-control" />
+                            </div>
+
+                            <div class="row p-1" >
+                                <div class="col-3">
+                                    <input type="button4" value=" C "  onclick="simple_cal.answ.value = '' ">
+                                </div>
+
+                                <div class="col-3">
+                                    <input type="button3" value=" ( " onclick="simple_cal.answ.value += '(' ">
+                                </div>
+                                
+                                <div class="col-3">
+                                    <input type="button3" value=" ) " onclick="simple_cal.answ.value += ')' ">
+                                </div>
+
+                                <div class="col-3">
+                                    <input type="button2" value=" + " onclick="simple_cal.answ.value += '+' ">
+                                </div>
+
+                            </div> <!--row1-->
+
+                            <div class="row p-1">
+                                <div class="col-3">
+                                    <input type="button1" value=" 1 " onclick="simple_cal.answ.value += '1' ">
+                                </div>
+
+                                <div class="col-3">
+                                    <input type="button1" value=" 2 " onclick="simple_cal.answ.value += '2' ">	
+                                </div>
+
+                                <div class="col-3">
+                                    <input type="button1" value=" 3 " onclick="simple_cal.answ.value += '3' ">	
+                                </div>
+
+                                <div class="col-3">
+                                    <input type="button2" value=" - " onclick="simple_cal.answ.value += '-' ">
+                                </div>
+
+                            </div> <!--row2-->
+        
+                            <div class="row p-1">
+                                <div class="col-3">
+                                    <input type="button1" value=" 4 " onclick="simple_cal.answ.value += '4' ">
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button1" value=" 5 " onclick="simple_cal.answ.value += '5' ">		
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button1" value=" 6 " onclick="simple_cal.answ.value += '6' ">	
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button2" value=" * " onclick="simple_cal.answ.value += '*' ">
+                                </div>
+        
+                            </div> <!--row3-->
+        
+                            <div class="row p-1">
+                                <div class="col-3">
+                                    <input type="button1" value=" 7 " onclick="simple_cal.answ.value += '7' ">
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button1" value=" 8 " onclick="simple_cal.answ.value += '8' ">	
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button1" value=" 9 " onclick="simple_cal.answ.value += '9' ">	
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button2" value=" / " onclick="simple_cal.answ.value += '/' ">
+                                </div>
+        
+                            </div> <!--row4-->
+
+                            <div class="row p-1">
+                                <div class="col-3">
+                                    <input type="button1" value=" 0 " onclick="simple_cal.answ.value += '0' ">
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button1" value="00" onclick="simple_cal.answ.value += '00' ">	
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button1" value=" . " onclick="simple_cal.answ.value += '.' ">	
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="submit2" name="submit_button" class="btn btn-primary" value="=" onclick="simple_cal.answ.value += '= ' + new String(eval(simple_cal.answ.value.replace(/\s/g, '')))"/>
+                                </div>
+                            </div> <!--row5-->
+
+                            <div class="row p-1">
+                                <div class="col-3">
+                                    <input type="button2" value=" x " onclick="simple_cal.answ.value += 'x' ">	
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button2" value=" y " onclick="simple_cal.answ.value += 'y' ">	
+                                </div>
+        
+                                <div class="col-3">
+                                    <input type="button2" value=" z " onclick="simple_cal.answ.value += 'z' ">	
+                                </div>
+            
+                                <div class="col-3">
+                                    <input type="button2" value=" t " onclick="simple_cal.answ.value += 't' ">
+                                </div>
+                            </div> <!--row6-->
+
+                            <div class="row p-1" style="margin-top: 10px;">
+                                <div class="mb-3">
+                                    <label for="xVal">x =</label>
+                                    <input type="number2" id="xVal" name="xVal">
+                                    <input type="buttonParam" onclick="simple_cal.answ.value = simple_cal.answ.value.replace(/x/g, '*'+(new String(xVal.value)))">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="yVal">y =</label>
+                                    <input type="number2" id="yVal" name="yVal">
+                                    <input type="buttonParam" onclick="simple_cal.answ.value = simple_cal.answ.value.replace(/y/g, '*'+new String(yVal.value))">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="zVal">x =</label>
+                                    <input type="number2" id="zVal" name="zVal">
+                                    <input type="buttonParam" onclick="simple_cal.answ.value = simple_cal.answ.value.replace(/z/g, '*'+new String(zVal.value))">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tVal">y =</label>
+                                    <input type="number2" id="tVal" name="tVal">
+                                    <input type="buttonParam" onclick="simple_cal.answ.value = simple_cal.answ.value.replace(/t/g, '*'+new String(tVal.value))">
+                                </div>
+                            </div> <!--row7-->
+
+                            <div class="row p-1" style="float: left;">
+                                <input type="reset">
+                            </div>
+                        </form>
+
+                        <form name="history" style="float: right; padding-left: 15px; justify-content: center;">
+                            <h5 style="color: white;">Previous Equation</h5>
+                            <div class="table-responsive" style=" height: 500px;">
+                                <table class="table table-bordered">
+                                    <% if(hisData.length > 0) { hisData.forEach(function(data){ %>
+                                    <tr>
+                                        <td><%= data.Equation %></td>
+                                    </tr>
+                                    <% }); } else { %>
+                                    <tr>
+                                        <td colspan="5">No Data Found</td>
+                                    </tr>
+                                    <% } %>
+                                </table>
+                            </div>						
+                            
+                        </form>
+                </span>
+            </div> <!-- BS: row justify-content-*-center End-->                
+        </div>  <!-- Container End-->
+
+        <div class="text-center p-1">
+			<font><a href="https://www.linkedin.com/in/yuqi614/" style="color: #e2e8e4;"> Developed by Yuqi Yang For Pulsnic Software Assessment </a> </font>
+		</div> <!-- credit -->
+
+        <!-- Bootstrap core JavaScript -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
