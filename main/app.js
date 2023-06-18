@@ -3,17 +3,15 @@ var router = express.Router();
 var app = express();
 var path = require('path');
 
-// Main Operating Page Router 
-var db = require('./database')
-var sampledataRouter = require('./routes/sample_data');
-app.use('/sample_data', sampledataRouter);
-
-
 // bodyParser
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Main Operating Page Router 
+var db = require('./database')
+var sampledataRouter = require('./routes/sample_data');
+app.use('/sample_data', sampledataRouter);
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
